@@ -25,3 +25,37 @@ pipeline stages. (Claim Check pattern 346 EIP)
 1. Select toolset options (Python 3.x, NATS, AsyncIO, Uvloop, asyncpg, schematics, redis/postgresql)
 2. Design abstract canonical pipeline - minimal example to support analysis.
 3. Analyse (code / benchmark)
+
+## Notes
+
+### Postgresql
+
+Maximum json size is 1GB.  
+
+#### Run the docker image
+``` bash 
+docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=password -d postgres
+
+#### To access psql of running postgresql docker image
+psql -h localhost -U postgres
+
+#### Database setup
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE TABLE claims (message_id uuid primary key, payload json not null);
+```
+
+## Future
+* Use of redis (https://github.com/jonathanslenders/asyncio-redis)
+``` bash
+# Start a default docker container
+docker run -p 6379:6379 --name redis -d redis
+
+# Connect to the redis cli (https://redis.io/topics/rediscli)
+docker run -it --link redis:redis --rm redis redis-cli -h redis -p 6379 
+```
+
+
+### General
+
+https://blog.miguelgrinberg.com/post/unit-testing-asyncio-code
+
