@@ -41,7 +41,7 @@ psql -h localhost -U postgres
 
 #### Database setup
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-CREATE TABLE claims (message_id uuid primary key, payload json not null);
+CREATE TABLE claims (claim_id uuid primary key, payload json not null);
 ```
 
 ## Future
