@@ -2,7 +2,7 @@
 
 ## Overview
 
-Project to explore the implementation of the claim check EIP pattern using NATs ref. (https://www.enterpriseintegrationpatterns.com/patterns/messaging/StoreInLibrary.html)
+Project to explore the implementation of the claim check EIP pattern (p346) using NATs ref. (https://www.enterpriseintegrationpatterns.com/patterns/messaging/StoreInLibrary.html)
 
 NATs message size is restricted to a 1MB message size.  The size of messages will impact performance.  
 
