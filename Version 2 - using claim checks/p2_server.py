@@ -1,8 +1,3 @@
-## Publish random data with payloads of desired size to NATS message queue.
-# Allow size of message to be set via parameters.
-# Allow wait between messages to be set via parameters.
-# Initially implement without claim check / storage of data outside of message as V1 then later with claim check as V2.
-
 import asyncio
 import json
 
