@@ -12,7 +12,7 @@ from nats.aio.client import Client as NATS
 import asyncpg
 
 
-NUM_MESSAGES = 10
+NUM_MESSAGES = 100
 MSG_SIZE = 10
 # MSG_SIZE =  99999  # Bytes - Works
 # MSG_SIZE = 1000000  # Bytes - Exceeds maximum
@@ -28,7 +28,6 @@ queues = {'raw_data': 'p1.s0',
 
 
 async def random_data(loop):
-    # TODO: REUSE NATS and PG CONNECTIONS - REFACTOR
     nc = NATS()
     await nc.connect(f"{NATS_HOST}:{NATS_PORT}", loop=loop)
     pgconn = await asyncpg.connect(user='postgres', password='password',
