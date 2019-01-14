@@ -6,7 +6,7 @@ Project to explore the implementation of the claim check EIP pattern using NATs 
 
 NATs message size is restricted to a 1MB message size.  The size of messages will impact performance.  
 
-There options available:
+Available options:
 * Split the payload into multiple messages.
 * Re-architect to use smaller payloads.
 * Use a persistent store to keep all non-essential reference data out of the message and pass 
