@@ -11,7 +11,7 @@ Available options:
 * Re-architect to use smaller payloads.
 * Use a persistent store to keep all non-essential reference data out of the message and pass 
 on a reference within the message pipeline to enable retrieval as necessary during later 
-pipeline stages. (Claim Check pattern 346 EIP)
+pipeline stages. **(Claim Check pattern 346 EIP)**
 
 ## Questions
 
@@ -57,5 +57,6 @@ docker run -it --link redis:redis --rm redis redis-cli -h redis -p 6379
 
 ### General
 
-https://blog.miguelgrinberg.com/post/unit-testing-asyncio-code
+* https://blog.miguelgrinberg.com/post/unit-testing-asyncio-code
+* https://github.com/nats-io/asyncio-nats-examples/blob/master/wildcard_tester.py
 
