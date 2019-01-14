@@ -13,7 +13,7 @@ import asyncpg
 
 
 NUM_MESSAGES = 100
-MSG_SIZE = 10
+MSG_SIZE = 10000
 # MSG_SIZE =  99999  # Bytes - Works
 # MSG_SIZE = 1000000  # Bytes - Exceeds maximum
 

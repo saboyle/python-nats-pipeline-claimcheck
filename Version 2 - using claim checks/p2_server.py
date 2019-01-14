@@ -64,7 +64,8 @@ async def pipeline(loop):
 
 
     async def mh_s3(msg):
-        logger.debug('In mh_s3 with {}'.format(msg.data.decode('utf-8')))
+        data = json.loads(msg.data.decode('utf-8'))
+        logger.info('Completed {}'.format(data["uid"]))
 
     ######################
     # Pipeline Creation
